@@ -11,14 +11,22 @@
 h1,
 h2,
 h3,
+h4,
 .btn {
   font-family: "Lora", serif;
   font-weight: 400;
+  color: #161616;
 }
 
 p {
   font-family: "Roboto", sans-serif;
   color: #868688;
+  font-size: 0.8rem;
+}
+
+ul,
+li {
+  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
 }
 
@@ -311,10 +319,53 @@ a {
   background-image: url(/img/photos/hiking.jpg);
 }
 
+/* Booking Page */
+
+.booking__room {
+  max-width: 85vw;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d3d3d3;
+  text-align: left;
+}
+
+.room__img {
+  width: 100%;
+}
+
+.roomtype__subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.roomtype__text {
+  list-style-position: inside;
+  margin-bottom: 0.5rem;
+  /* line-height: 0.8rem; */
+  font-weight: 100;
+}
+
+.roomtype__book {
+  border-top: 1px solid #d3d3d3;
+}
+
+.book__price {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.book__text-taxes {
+  margin-bottom: 1rem;
+}
+
 /* Modifiers */
 
 .btn-small {
   padding: 0.5rem 2rem;
+}
+
+.btn-wide {
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 .btn-large {
