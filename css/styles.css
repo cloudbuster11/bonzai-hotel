@@ -60,6 +60,7 @@ p {
   background-color: #fff;
   padding: 1rem;
   box-shadow: 0 15px 15px -15px rgb(0 0 0 / 30%);
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -72,34 +73,42 @@ p {
 .nav__links {
   color: #000;
   font-size: 0.8rem;
-  text-decoration: none;
+  font-weight: 700;
   font-family: "Lora", serif;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
   text-transform: uppercase;
-}
-
-.nav__links:hover {
-  color: #868688;
-  border-bottom: 1px solid #c0bab0;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav__links:visited {
   color: #000;
 }
 
+.nav__links:hover {
+  color: #868688;
+  text-decoration: underline;
+  /* border-bottom: 1px solid #c0bab0; */
+  transition: all 0.3s ease-in-out;
+}
+
 /* Hero Section */
 
 .hero {
   grid-area: hero;
-  background-image: url(/img/photos/09-day.jpg);
+  background-image: url(/img/photos/09-night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
-  min-height: 550px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero__logo {
+  height: 30%;
+  margin-bottom: 1rem;
 }
 
 .hero__title {
