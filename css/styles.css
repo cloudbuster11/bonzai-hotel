@@ -110,7 +110,7 @@ a {
 
 .hero {
   grid-area: hero;
-  background-image: url(/img/photos/09-night.jpg);
+  background-image: url(../img/photos/09-night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0;
@@ -207,19 +207,19 @@ a {
 }
 
 .cards__enjoy {
-  background-image: url(/img/photos/03-day.jpg);
+  background-image: url(../img/photos/03-day.jpg);
 }
 
 .cards__explore {
-  background-image: url(/img/photos/08-day.jpg);
+  background-image: url(../img/photos/08-day.jpg);
 }
 
 .cards__dosomething {
-  background-image: url(/img/photos/01-night.jpg);
+  background-image: url(../img/photos/01-night.jpg);
 }
 
 .cards__dontdo {
-  background-image: url(/img/photos/02-night.jpg);
+  background-image: url(../img/photos/02-night.jpg);
 }
 
 .cards__title {
@@ -311,19 +311,19 @@ a {
 }
 
 .cards__dining {
-  background-image: url(/img/photos/dining.jpg);
+  background-image: url(../img/photos/dining.jpg);
 }
 
 .cards__pool {
-  background-image: url(/img/photos/pool.jpg);
+  background-image: url(../img/photos/pool.jpg);
 }
 
 .cards__garden {
-  background-image: url(/img/photos/garden.jpg);
+  background-image: url(../img/photos/garden.jpg);
 }
 
 .cards__hiking {
-  background-image: url(/img/photos/hiking.jpg);
+  background-image: url(../img/photos/hiking.jpg);
 }
 
 /* Booking Page */
