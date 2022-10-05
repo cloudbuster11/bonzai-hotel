@@ -1,3 +1,3 @@
 # bonzai-hotel
 A responsive webpage for learning purposes.
-Only links in <nav> is functional.
+Only links in nav is functional.
