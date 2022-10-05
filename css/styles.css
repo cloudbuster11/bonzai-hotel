@@ -367,6 +367,11 @@ a {
   justify-content: center;
 }
 
+.cart__total {
+  display: none;
+  text-transform: uppercase;
+}
+
 .cart__price {
   margin-right: 0.5rem;
 }
@@ -461,5 +466,10 @@ a {
 
   .criteria__dates {
     margin-right: 1.5rem;
+  }
+
+  .cart__total {
+    display: block;
+    margin-right: 0.5rem;
   }
 }
