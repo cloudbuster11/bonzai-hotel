@@ -38,10 +38,17 @@ a {
 }
 
 .btn {
-  background-color: #061a1d;
+  background-color: #252525;
   color: #fff;
   text-transform: uppercase;
   border: none;
+}
+
+/* Kom ihåg */
+.menu__arrow {
+  transform: rotate(-90deg);
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 
 .logo {
@@ -321,39 +328,87 @@ a {
 
 /* Booking Page */
 
-.booking__room {
-  max-width: 85vw;
+.main__booking {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+}
+
+.booking__searchbar {
+  background-color: #252525;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.booking__searchbar p {
+  color: #fff;
+  font-family: "Lora", serif;
+}
+
+.searchbar__criteria {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.criteria__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.searchbar__cart {
+  border-left: 1px solid #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__price {
+  margin-right: 0.5rem;
+}
+
+.booking__title {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.booking__roomcard {
   padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid #d3d3d3;
   text-align: left;
 }
 
-.room__img {
+.roomcard__img {
   width: 100%;
 }
 
-.roomtype__subtitle {
+.roomcard__subtitle {
   margin-bottom: 0.5rem;
 }
 
-.roomtype__text {
+.roomcard__text {
   list-style-position: inside;
   margin-bottom: 0.5rem;
   /* line-height: 0.8rem; */
   font-weight: 100;
 }
 
-.roomtype__book {
+.roomcard__choose {
   border-top: 1px solid #d3d3d3;
 }
 
-.book__price {
+.choose__price {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.book__text-taxes {
+.choose__text-taxes {
   margin-bottom: 1rem;
 }
 
@@ -393,5 +448,18 @@ a {
   .footer {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "about legal where contact press";
+  }
+
+  /* Booking Page */
+
+  .criteria__text {
+    margin-right: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .criteria__dates {
+    margin-right: 1.5rem;
   }
 }
