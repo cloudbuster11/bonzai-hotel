@@ -44,11 +44,11 @@ a {
   border: none;
 }
 
-/* Kom ihåg */
 .menu__arrow {
   transform: rotate(-90deg);
   font-size: 1.5rem;
   font-weight: 100;
+  cursor: pointer;
 }
 
 .logo {
@@ -140,7 +140,7 @@ a {
 .main {
   grid-area: main;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .main__title {
@@ -334,6 +334,8 @@ a {
   grid-auto-rows: auto;
 }
 
+/* Searchbar Section */
+
 .booking__searchbar {
   background-color: #252525;
   margin-bottom: 1rem;
@@ -376,15 +378,52 @@ a {
   margin-right: 0.5rem;
 }
 
+/* Filter Selection Section */
+
+.booking__filter {
+  border: 1px solid #d3d3d3;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.filter__text-sort {
+  text-align: left;
+  margin-right: 0.5rem;
+}
+
+.filter__selection {
+  font-weight: 600;
+}
+
+.filter__text-filters {
+  margin: 0 0.5rem 0 1rem;
+  display: flex;
+}
+
+.filter__show {
+  font-weight: 600;
+}
+
+.booking__filter .menu__arrow {
+  color: #222222;
+  padding-right: 0.5rem;
+  align-self: end;
+}
+
+/* Room Cards Section */
+
 .booking__title {
   text-align: left;
-  margin-bottom: 0.5rem;
+  margin-left: 1rem;
   text-transform: uppercase;
 }
 
 .booking__roomcard {
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
   border: 1px solid #d3d3d3;
   text-align: left;
 }
@@ -400,7 +439,6 @@ a {
 .roomcard__text {
   list-style-position: inside;
   margin-bottom: 0.5rem;
-  /* line-height: 0.8rem; */
   font-weight: 100;
 }
 
@@ -410,10 +448,10 @@ a {
 
 .choose__price {
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
-.choose__text-taxes {
+.choose__taxes {
   margin-bottom: 1rem;
 }
 
