@@ -1,23 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:wght@300;400;500;700&display=swap");
-/** TABLE OF CONTENTS
- — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
-1 — Global Styles
-1.1 — Text
-1.2 — Buttons
-2 — Layout
-2.1 — Wrapper
-2.2 — Nav
-2.3 - Hero
-2.4 - Main
-2.5 - Cards
-2.6 - Footer
-3 — Page Specific CSS
-3.1 — About.html
-3.2 - Booking.html
-4 — Modifiers
-5 - Media Queries
-
-/// END TABLE OF CONTENTS **/
 
 * {
   box-sizing: border-box;
@@ -33,6 +14,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 .btn {
   font-family: "Baskervville", serif;
   font-weight: 400;
@@ -73,7 +55,7 @@ a {
 
 .btn:hover {
   transition: 1.5s ease;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .menu__arrow {
@@ -121,7 +103,7 @@ a {
   width: 100%;
   background-color: #fff;
   padding: 1rem;
-  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 30%);
+  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 80%);
   z-index: 1;
   display: flex;
   align-items: center;
@@ -141,7 +123,6 @@ a {
 .nav__links:hover {
   color: #868688;
   text-decoration: underline;
-  /* border-bottom: 1px solid #c0bab0; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -169,10 +150,9 @@ a {
 
 .hero__title {
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 1.4rem;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  margin-bottom: 2rem;
 }
 
 /* =========================
@@ -213,18 +193,6 @@ a {
   gap: 1rem;
 }
 
-/* Spara fungerara */
-/* .cards__card {
-  height: 200px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* Slut fungerande kod */
-
 .cards__card {
   min-height: 200px;
   width: 90vw;
@@ -233,6 +201,13 @@ a {
   justify-content: center;
   align-items: center;
   padding: 5rem 0;
+}
+
+.cards__title {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .cards--enjoy,
@@ -278,13 +253,6 @@ a {
 
 .cards--dontdo {
   background-image: url(../img/photos/02-night.jpg);
-}
-
-.cards__title {
-  color: rgb(255, 255, 255);
-  font-style: italic;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 /* =========================
@@ -536,7 +504,7 @@ a {
 }
 
 .sort__selection {
-  font-weight: 600;
+  font-weight: 500;
   margin-right: 0.3rem;
 }
 
@@ -546,7 +514,7 @@ a {
 }
 
 .show__filter {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0.3rem 0 1.5rem;
 }
 
@@ -630,10 +598,6 @@ a {
     justify-content: right;
   }
 
-  .logo--hide {
-    display: inline;
-  }
-
   .nav__links {
     margin-right: 2rem;
   }
@@ -670,5 +634,11 @@ a {
   .cart__total {
     display: block;
     margin-right: 0.5rem;
+  }
+
+  /* Modifiers */
+
+  .logo--hide {
+    display: inline;
   }
 }
