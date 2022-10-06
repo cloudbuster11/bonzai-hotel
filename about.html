@@ -14,7 +14,7 @@
     <div class="wrapper">
       <!-- Navigation Section -->
       <nav class="nav">
-        <h3 class="logo nav__logo">Bonzai Hotel</h3>
+        <h3 class="logo logo--hide">Bonzai Hotel</h3>
         <a href="index.html" class="nav__links">Home</a>
         <a href="about.html" class="nav__links">About us</a>
         <a href="booking.html" class="nav__links">Booking</a>
@@ -32,7 +32,7 @@
 
       <!-- Main Section -->
       <main class="main">
-        <h2 class="main__title">AI driven eko living</h2>
+        <h2 class="main__title">AI Driven Eko Living</h2>
         <h3 class="main__subtitle">Our vision</h3>
         <p class="main__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -50,37 +50,54 @@
         <img
           class="main__ecoimg"
           src="./img/logo/eco-label.png"
-          alt=""
+          alt="Eco Certified Logo"
         />
       </main>
 
       <!-- Cards Section -->
+
       <section class="cards">
-        <article class="cards__card cards__dining">
+        <article class="cards__card cards--facilities">
+          <h2 class="facilities__title">What to do?</h2>
+          <p class="facilities__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Dolores fuga aliquid pariatur? Consectetur iste debitis
+            alias earum reprehenderit sequi, iusto possimus fugiat!
+            Temporibus quibusdam.
+          </p>
+          <button
+            class="btn btn--small"
+            onclick="window.location.href = 'booking.html';"
+          >
+            Book now
+          </button>
+        </article>
+
+        <article class="cards__card cards--dining">
           <h2 class="cards__title">Fine Dining</h2>
-          <a href="" class="cards__links">Discover more</a>
+          <a href="" class="cards__link">Discover more</a>
         </article>
 
-        <article class="cards__card cards__pool">
+        <article class="cards__card cards--pool">
           <h2 class="cards__title">Swimming pool</h2>
-          <a href="" class="cards__links">Discover more</a>
+          <a href="" class="cards__link">Discover more</a>
         </article>
 
-        <article class="cards__card cards__garden">
+        <article class="cards__card cards--garden">
           <h2 class="cards__title">The Gardens</h2>
-          <a href="" class="cards__links">Discover more</a>
+          <a href="" class="cards__link">Discover more</a>
         </article>
 
-        <article class="cards__card cards__hiking">
+        <article class="cards__card cards--hiking">
           <h2 class="cards__title">Hiking</h2>
-          <a href="" class="cards__links">Discover more</a>
+          <a href="" class="cards__link">Discover more</a>
         </article>
       </section>
 
       <!-- Footer Section -->
       <footer class="footer">
         <article class="footer__where">
-          <h3 class="logo footer__title">Bonzai</h3>
+          <h3 class="logo logo--footer">Bonzai</h3>
           <ul>
             <li>Bonsai Hotel</li>
             <li>Adress 4445</li>
@@ -99,7 +116,7 @@
           </ul>
         </article>
         <article class="footer__contact">
-          <h3 class="footer__subtitle">Hello</h3>
+          <h3 class="footer__subtitle">Say Hello</h3>
           <ul>
             <li>Contact</li>
             <li>Newsletter</li>
@@ -110,11 +127,11 @@
           <h3 class="footer__subtitle">Legal</h3>
           <ul>
             <li>Privacy Policy</li>
-            <li>Terms</li>
+            <li>Terms & Conditions</li>
           </ul>
         </article>
         <article class="footer__press">
-          <h3 class="footer__subtitle">Press</h3>
+          <h3 class="footer__subtitle">Press & Media</h3>
           <ul>
             <li>Awards</li>
             <li>Press</li>

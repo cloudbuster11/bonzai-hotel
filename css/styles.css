@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Roboto:wght@300;400;500;700&display=swap");
+/** TABLE OF CONTENTS
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — /
+1 — Global Styles
+1.1 — Text
+1.2 — Buttons
+2 — Layout
+2.1 — Wrapper
+2.2 — Nav
+2.3 - Hero
+2.4 - Main
+2.5 - Cards
+2.6 - Footer
+3 — Page Specific CSS
+3.1 — About.html
+3.2 - Booking.html
+4 — Modifiers
+5 - Media Queries
+
+/// END TABLE OF CONTENTS **/
 
 * {
   box-sizing: border-box;
@@ -6,22 +25,25 @@
   padding: 0;
 }
 
-/* Universal */
+/* =========================
+1.1 Text
+========================= */
 
 h1,
 h2,
 h3,
 h4,
 .btn {
-  font-family: "Lora", serif;
+  font-family: "Baskervville", serif;
   font-weight: 400;
   color: #161616;
+  text-transform: uppercase;
 }
 
 p {
   font-family: "Roboto", sans-serif;
   color: #868688;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 ul,
@@ -33,28 +55,44 @@ li {
 a {
   font-size: 0.8rem;
   font-weight: 700;
-  font-family: "lora", serif;
+  font-family: "Baskervville", serif;
   text-decoration: none;
 }
+
+/* =========================
+1.1 Buttons
+========================= */
 
 .btn {
   background-color: #252525;
   color: #fff;
-  text-transform: uppercase;
   border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 1.5s ease;
+}
+
+.btn:hover {
+  transition: 1.5s ease;
+  opacity: 0.7;
 }
 
 .menu__arrow {
   transform: rotate(-90deg);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 100;
   cursor: pointer;
 }
 
 .logo {
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 60%;
+  margin-right: auto;
 }
+
+/* =========================
+2.1 Wrapper
+========================= */
 
 .wrapper {
   max-width: 1000px;
@@ -67,10 +105,15 @@ a {
     "hero"
     "main"
     "cards"
+    "newsletter"
+    "findus"
+    "social"
     "footer";
 }
 
-/* Blocks */
+/* =========================
+2.2 Navigation
+========================= */
 
 .nav {
   grid-area: nav;
@@ -85,14 +128,10 @@ a {
   justify-content: space-around;
 }
 
-.nav__logo {
-  display: none;
-}
-
 .nav__links {
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
   color: #000;
+  text-transform: uppercase;
 }
 
 .nav__links:visited {
@@ -106,14 +145,16 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-/* Hero Section */
+/* =========================
+2.3 Hero
+========================= */
 
 .hero {
   grid-area: hero;
   background-image: url(../img/photos/09-night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 0;
+  background-position: bottom;
   max-height: 500px;
   display: flex;
   flex-direction: column;
@@ -128,14 +169,15 @@ a {
 
 .hero__title {
   color: #fff;
-  text-transform: uppercase;
   padding: 1rem 2rem;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   margin-bottom: 2rem;
 }
 
-/* Main Section */
+/* =========================
+2.4 Main
+========================= */
 
 .main {
   grid-area: main;
@@ -157,102 +199,178 @@ a {
   line-height: 1.6rem;
 }
 
-/* Cards Section */
+/* =========================
+2.5 Cards
+========================= */
 
 .cards {
   grid-area: cards;
   width: 100%;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.cards__card {
+/* Spara fungerara */
+/* .cards__card {
   height: 200px;
   width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+
+/* Slut fungerande kod */
+
+.cards__card {
+  min-height: 200px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
 }
 
-.cards__enjoy,
-.cards__explore,
-.cards__dosomething,
-.cards__dontdo,
-.cards__dining,
-.cards__pool,
-.cards__garden,
-.cards__hiking {
+.cards--enjoy,
+.cards--explore,
+.cards--dosomething,
+.cards--dontdo,
+.cards--dining,
+.cards--pool,
+.cards--garden,
+.cards--hiking {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   transition: 1s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.cards__enjoy:hover,
-.cards__explore:hover,
-.cards__dosomething:hover,
-.cards__dontdo:hover,
-.cards__dining:hover,
-.cards__pool:hover,
-.cards__garden:hover,
-.cards__hiking:hover {
+.cards--enjoy:hover,
+.cards--explore:hover,
+.cards--dosomething:hover,
+.cards--dontdo:hover,
+.cards--dining:hover,
+.cards--pool:hover,
+.cards--garden:hover,
+.cards--hiking:hover {
   transition: 1.5s ease;
   background-size: 110%;
   opacity: 0.7;
 }
 
-.cards__enjoy {
+.cards--enjoy {
   background-image: url(../img/photos/03-day.jpg);
 }
 
-.cards__explore {
+.cards--explore {
   background-image: url(../img/photos/08-day.jpg);
 }
 
-.cards__dosomething {
+.cards--dosomething {
   background-image: url(../img/photos/01-night.jpg);
 }
 
-.cards__dontdo {
+.cards--dontdo {
   background-image: url(../img/photos/02-night.jpg);
 }
 
 .cards__title {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-style: italic;
-  text-transform: uppercase;
+  font-weight: 500;
   cursor: pointer;
 }
 
-/* Footer */
+/* =========================
+2.6 Newsletter
+========================= */
+
+.newsletter {
+  grid-area: newsletter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter__text {
+  max-width: 370px;
+  margin: 2rem 0 4rem 0;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+/* =========================
+2.7 Find us
+========================= */
+
+.findus {
+  grid-area: findus;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.findus__map {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+/* =========================
+2.8 Social Media
+========================= */
+.social {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social__profilename {
+  margin: 1rem 0;
+}
+
+.social__icons {
+  margin-bottom: 2rem;
+  color: #484f62;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* =========================
+2.9 Footer
+========================= */
 
 .footer {
   grid-area: footer;
   border-top: 1px solid #000;
-  margin-bottom: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   grid-template-areas:
     "where where"
     "about contact"
-    "legal press";
+    "press legal";
+  gap: 1rem;
 }
 
-.footer__title {
-  margin-top: 1rem;
+.logo--footer {
+  margin-top: 0.8rem;
   margin-bottom: 0.5rem;
 }
 
 .footer__subtitle {
   margin-top: 1rem;
   margin-bottom: 0.7rem;
-  text-transform: uppercase;
+  text-align: center;
 }
 
 .footer li {
@@ -260,7 +378,7 @@ a {
   list-style: none;
   margin-bottom: 0.3rem;
   text-transform: uppercase;
-  min-width: 7rem;
+  text-align: center;
 }
 
 .footer__where {
@@ -273,13 +391,13 @@ a {
   justify-self: center;
 }
 
-.footer__contact {
-  grid-area: contact;
+.footer__legal {
+  grid-area: legal;
   justify-self: center;
 }
 
-.footer__legal {
-  grid-area: legal;
+.footer__contact {
+  grid-area: contact;
   justify-self: center;
 }
 
@@ -288,45 +406,68 @@ a {
   justify-self: center;
 }
 
-/* About Page */
+/* =========================
+3.1 About.html
+========================= */
+
+/* Main Section */
 
 .main__ecoimg {
   height: 7rem;
 }
 
-.cards__links {
+/* Cards Section */
+
+.cards--facilities {
+  text-align: center;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.facilities__title {
+  margin-bottom: 0.5rem;
+}
+
+.facilities__text {
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.cards__link {
   color: #fff;
   letter-spacing: 0.3rem;
   font-style: italic;
   text-transform: uppercase;
   margin-top: 0.5rem;
   background-color: transparent;
-  background: linear-gradient(#fff 0 0) center bottom / 100% 2px
+  background: linear-gradient(#fff 0 0) center bottom / 100% 1px
     no-repeat;
   transition: 0.3s linear;
 }
 
-.cards__links:hover {
-  background-size: 50% 2px;
+.cards__link:hover {
+  background-size: 50% 1px;
 }
 
-.cards__dining {
+.cards--dining {
   background-image: url(../img/photos/dining.jpg);
 }
 
-.cards__pool {
+.cards--pool {
   background-image: url(../img/photos/pool.jpg);
 }
 
-.cards__garden {
+.cards--garden {
   background-image: url(../img/photos/garden.jpg);
 }
 
-.cards__hiking {
+.cards--hiking {
   background-image: url(../img/photos/hiking.jpg);
 }
 
-/* Booking Page */
+/* =========================
+3.2 Booking.html
+========================= */
 
 .main__booking {
   display: grid;
@@ -340,12 +481,12 @@ a {
   background-color: #252525;
   margin-bottom: 1rem;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 70% 30%;
 }
 
 .booking__searchbar p {
   color: #fff;
-  font-family: "Lora", serif;
+  font-family: "Baskervville", serif;
 }
 
 .searchbar__criteria {
@@ -363,7 +504,7 @@ a {
 
 .searchbar__cart {
   border-left: 1px solid #fff;
-  padding: 1rem;
+  /* padding: 1rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,6 +517,7 @@ a {
 
 .cart__price {
   margin-right: 0.5rem;
+  font-size: 1rem;
 }
 
 /* Filter Selection Section */
@@ -389,13 +531,13 @@ a {
   align-items: flex-end;
 }
 
-.filter__text-sort {
+.sort__sortby {
   text-align: left;
-  margin-right: 0.5rem;
 }
 
-.filter__selection {
+.sort__selection {
   font-weight: 600;
+  margin-right: 0.3rem;
 }
 
 .filter__text-filters {
@@ -403,8 +545,9 @@ a {
   display: flex;
 }
 
-.filter__show {
+.show__filter {
   font-weight: 600;
+  margin: 0 0.3rem 0 1.5rem;
 }
 
 .booking__filter .menu__arrow {
@@ -418,7 +561,6 @@ a {
 .booking__title {
   text-align: left;
   margin-left: 1rem;
-  text-transform: uppercase;
 }
 
 .booking__roomcard {
@@ -455,37 +597,52 @@ a {
   margin-bottom: 1rem;
 }
 
-/* Modifiers */
+/* =========================
+4 Modifiers
+========================= */
 
-.btn-small {
-  padding: 0.5rem 2rem;
+.logo--hide {
+  display: none;
 }
 
-.btn-wide {
+.btn--small {
+  padding: 0.4rem 2.5rem;
+  font-size: 1rem;
+}
+
+.btn--wide {
   width: 100%;
   padding: 0.5rem 0;
 }
 
-.btn-large {
-  padding: 1rem 4rem;
+.btn--large {
+  padding: 0.6rem 0;
+  width: 330px;
+  font-size: 1.4rem;
 }
 
-/* Media queris */
+/* =========================
+5 Media Queries
+========================= */
 
 @media screen and (min-width: 768px) {
   .nav {
     justify-content: right;
   }
 
-  .nav__logo {
+  .logo--hide {
     display: inline;
-    font-weight: 500;
-    opacity: 60%;
-    margin-right: auto;
   }
 
   .nav__links {
     margin-right: 2rem;
+  }
+
+  /* Cards Section */
+
+  .cards__card {
+    height: 200px;
+    width: 350px;
   }
 
   .footer {
@@ -494,6 +651,10 @@ a {
   }
 
   /* Booking Page */
+
+  .booking__searchbar {
+    grid-template-columns: 80% 20%;
+  }
 
   .criteria__text {
     margin-right: 1rem;
