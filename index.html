@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
+
     <title>Bonzai Hotel</title>
   </head>
   <body>
@@ -76,7 +77,9 @@
       <!--  Newsletter Section -->
 
       <section class="newsletter">
-        <button class="btn btn--large">Stay up to date</button>
+        <button class="btn btn--large btn__show-modal">
+          Stay up to date
+        </button>
         <p class="newsletter__text">
           Sign up for our free newsletter. Receive offers and much
           more. Easy to join and easy to unsubscribe.
@@ -146,6 +149,19 @@
           </ul>
         </article>
       </footer>
+
+      <!-- Newsletter Modal -->
+      <div class="modal hidden">
+        <button class="btn__close-modal">&times;</button>
+        <h2 class="modal__title">Join our newsletter!</h2>
+        <form class="modal__form">
+          <label>Email:</label>
+          <input type="email" />
+          <button class="btn btn--large">Join</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
