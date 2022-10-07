@@ -4,8 +4,8 @@
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
-const btnCloseModal = document.querySelector(".btn__close-modal");
-const btnsOpenModal = document.querySelectorAll(".btn__show-modal");
+const btnCloseModal = document.querySelector(".btn__modal-close");
+const btnsOpenModal = document.querySelectorAll(".btn__modal-show");
 
 const openModal = function (e) {
   e.preventDefault();

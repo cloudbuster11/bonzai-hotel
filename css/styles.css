@@ -15,7 +15,10 @@ h2,
 h3,
 h4,
 h5,
-.btn {
+.btn,
+label,
+input,
+select {
   font-family: "Baskervville", serif;
   font-weight: 400;
   color: #161616;
@@ -417,8 +420,9 @@ a {
 }
 
 .modal__form label {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .modal__form input {
@@ -433,7 +437,7 @@ a {
   margin-top: 1rem;
 }
 
-.btn__close-modal {
+.btn__modal-close {
   position: absolute;
   top: 0.5rem;
   right: 2rem;

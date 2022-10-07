@@ -43,7 +43,7 @@
                 Guest : 2 Adults, 1 Children
               </p>
             </div>
-            <p class="menu__arrow">&#60;</p>
+            <p class="menu__arrow btn__modal-show">&#60;</p>
           </section>
           <section class="searchbar__cart">
             <p class="cart__total">Total :</p>
@@ -193,6 +193,43 @@
           </ul>
         </article>
       </footer>
+
+      <!-- Booking/Searchbar Modal -->
+      <div class="modal hidden">
+        <button class="btn__modal-close">&times;</button>
+        <h2 class="modal__title">Book a room</h2>
+        <form class="modal__form">
+          <label>Arrival:</label>
+          <input type="date" value="yyyy-mm-dd">
+          <label>Departure:</label>
+          <input type="date" value="yyyy-mm-dd">
+          <label>NO. of adults:</label>
+          <select name="adults">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <label>NO. of children:</label>
+          <select name="adults">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <button class="btn btn--large">Check</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+
     </div>
   </body>
 </html>
